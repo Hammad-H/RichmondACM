@@ -28,7 +28,7 @@ function setHeader(dir) {
 
 					  	<div class="collapse navbar-collapse" id="myNavbar" aria-expanded="false" style="height: 0px;">
 							<ul class="nav navbar-nav">
-								<li><a href = "`+dir+`index.html">Home</a><li>
+								<li><a href = "`+dir+`home.html">Home</a><li>
 								<li><a href = "`+dir+`pages/about/index.html">About</a></li>
 								<li class="dropdown">
 									<a href = "#">
@@ -38,7 +38,7 @@ function setHeader(dir) {
 									<ul class="dropdown-menu">
 										<li><a href = "`+dir+`pages/resources/paths/index.html">Career Paths in CS</a></li>
 										<li><a href = "`+dir+`pages/resources/advice/index.html">Resume/Career Advice</a></li>
-										<li><a href = "`+dir+`pages/resources/resumes/index.html">Student Resumes</a></li>
+										<li><a href = "`+dir+`pages/resources/resumes/index.html">Resume Examples</a></li>
 										<li><a href = "`+dir+`pages/resources/interview/index.html">Interview Prep</a></li>
 									</ul>
 								</li>
@@ -53,7 +53,7 @@ function setHeader(dir) {
 										<li><a href = "`+dir+`pages/activities/volunteer/index.html">Volunteer</a></li>
 									</ul>
 								</li>
-								<li><a href = "https://tinyurl.com/joinACMur2017" target="_blank">Join ACM</a></li>
+								<li><a href = "https://goo.gl/forms/nsjKkzyxuO4rhL9A2" target="_blank">Join ACM</a></li>
 						    </ul>
 						 </div>
 			  		</div>

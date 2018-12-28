@@ -23,7 +23,8 @@
   font-size: 1.7vw;
 
   background-color: #555;
-  color: #DDD;
+  color: #fbfbfb;
+  font-family: 'Quicksand', sans-serif;
 }
 .resume-item h3 {
   padding: 10px 0px;
@@ -46,69 +47,21 @@
 .resume-item .img-holder img:first-child { margin-left: -20%; }
 .resume-item .img-holder img:nth-child(2){ margin-left:  40%; }
 
-.resume-meta {
-  display: none;
-}
-
-.resume-item .view-btn {
-  display: none;
-  width: 100%;
-  margin: 0;
-
-  border: 0px;
-
-  font-size: 1.8em;
-  background-color: #66B;
-  color: white;
-}
-
-.resume-item .file-btn {
-  display: none;
-  width: 50%;
-  margin: 0;
-  border: 0px;
-}
-.resume-item .file-btn[type]:before {
-  font-size: 1.6vw;
-  color: white;
-  position: relative;
-  content: attr(type);
-  margin: 0 25%;
-}
-.resume-item .file-btn[type="pre"] {
+.resume-item .pre-btn {
+  margin: 0 0 0 20px;
   float: left;
-  background-color: #F44;
 }
-.resume-item .file-btn[type="post"] {
+
+.resume-item .post-btn {
+  margin: 0 20px 0 0;
   float: right;
-  background-color: #66F;
 }
 
-#popup-page {
-  display: none;
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-
-}
-#popup-page #back-screen {
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-
-  background-color: black;
-  opacity: 0.3;
-}
-#popup-page #content-screen {
-  position: fixed;
-  width: 60%;
-  height: 80vh;
-  margin: 10vh 20%;
-  background-color: grey;
-
-  opacity: 1;
-}
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        line-height: 1;
+        margin:auto;
+        width: 100%;
+        }
