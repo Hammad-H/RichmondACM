@@ -32,14 +32,14 @@ function setHeader(dir) {
 								<li><a href = "`+dir+`pages/about/index.html">About</a></li>
 								<li class="dropdown">
 									<a href = "#">
-						      			Career Resources
+						      			Resources
 						      			<span class="caret"></span>
 						      		</a>
 									<ul class="dropdown-menu">
 										<li><a href = "`+dir+`pages/resources/paths/index.html">Career Paths in CS</a></li>
-										<li><a href = "`+dir+`pages/resources/advice/index.html">Resume/Career Advice</a></li>
-										<li><a href = "`+dir+`pages/resources/resumes/index.html">Resume Examples</a></li>
+										<li><a href = "`+dir+`pages/resources/resumes/index.html">Resume Guide</a></li>
 										<li><a href = "`+dir+`pages/resources/interview/index.html">Interview Prep</a></li>
+										<li><a href = "`+dir+`pages/resources/technical/index.html">Technical Guides</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">

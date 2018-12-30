@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+
+<head>
+	<!--Sets meta types about the website-->
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="level" content="3" />
+
+	<!--Sets title and favicon of the page-->
+	<title>ACM @ UR</title>
+	<link rel="icon" type="image/png" href="../../../includes/UR-ACM-Logo.png">	
+
+	<!--Sets title of the page-->
+	<meta http-equiv="description" content="This is a crawlable description" />
+
+	<!--Bootstrap + Query Implementation -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script>
+
+	<!--FontAwesome and Google Fonts -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+	<!--Pulls in ALL CUSTOM CSS Stylesheet-->
+	<style type="text/css"> @import url("../../../includes/header-styles.css");</style>
+	<style type="text/css"> @import url("../../../includes/shared-styles.css");</style>
+	<style type="text/css">	@import url("styles.css"); </style>
+
+	<!--Pulls in CUSTOM JS Script-->
+	<script type="text/javascript" src="../../../includes/scripts.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+		<header></header>
+		<main>
+			<!-- Post Content -->
+			<div class="jumbotron jumbotron-fluid">
+				<div class="container">
+					<div class="jumbotron-text">
+						<h1 class="display-4">Github Tutorial</h1>
+						<p> Github is a helpful version control tool that enables easy collaboration among developers. </p>
+					</div>
+				</div>
+			</div>
+			<div class="container" data-spy="scroll" data-target="#toc">
+				<div class="row">
+					<!-- sidebar, which will move to the top on a small screen -->
+		  		<div class="col-xs-2">
+		  		 	<nav id="toc" data-spy="affix" data-offset-top="450" data-offset-bottom="100" data-toggle="toc"></nav>
+		  		</div>
+					<div class="col-lg-10 col-sm-8 mx-auto">
+						<h2 class="section-heading"> Why Github? </h2>
+						<p>Imagine you are working with your friend on a coding project, and each of you works on a separate feature. Some problems will arise: if both of you need to edit the same file, you might have to meet up every time to pair-program, or inefficiently wait and take turn to edit the file. Further, if you are not happy with a change you make, it can be frustrating to backtrack to get the previous iteration. </p>
+
+						<p>Github solves these problems for you! As a type of distributed version control system, it allows you to: </p>
+						<ul>
+							<li> <i class="fas fa-check green"></i>  Collaborate with multiple developers on a shared codebase </li>
+							<li> <i class="fas fa-check green"></i>  Track changes over time</li>
+							<li> <i class="fas fa-check green"></i>  Revert files to their previous state</li>
+							<li> <i class="fas fa-check green"></i>  Merge code from different team members</li>
+							<li> <i class="fas fa-check green"></i>  Resolve code conflicts </li>
+						</ul>
+						<p> and more. It’s a very popular tool for personal/open source projects! Plus, Github is completely free if you are fine with having public repositories. Today, we will familiarize ourselves with the basic workflow of Github. </p>
+						<hr>
+						<h2 class="section-heading"> Set up </h2>
+
+						<p>If you haven’t had a Github account, you will need to get one <a href="https://github.com/">here</a>. You will also need to download and install github <a href="https://git-scm.com/downloads">here</a>.</p>
+
+						<p>We’ll mostly be working with Git from the terminal. Don’t worry if you’re not too familiar with using the terminal. These are the four basic commands you can learn for this tutorial:</p>
+						<ul>
+							<li> <code> pwd</code>: Print the path of 
+							the current working directory folder.</li>
+							<li> <code> ls </code>:  List all the files/folders in the current directory.</li>
+							<li>  <code> cd subfolder_name</code>: Navigate to a subfolder 
+							of the current directory.</li>
+							<li> <code> mkdir new_folder_name</code>: Create a new subfolder inside the current directory with the specified name.</li>
+						</ul>
+						<p>
+						Let’s open the terminal and create a folder within Desktop for our Github project, called GithubTutorial. Here’s a picture of the step by step process.
+					  </p>
+					  <img src="https://i.ibb.co/Y0MPkqH/Screen-Shot-2018-12-30-at-3-17-39-AM.png" class="img-responsive">
+					  <hr>
+					  <p>Then, type in these two commands but use your real name and email address: </p>
+					  <pre><code>git config --global user.name "Tracy Nguyen"
+git config --global user.email "xxx@richmond.edu"</code></pre>
+						<p>
+							Basically, these commands tell Github who you are, so that every commit you make for repositories on your local machine is attributed to your github account. The configuration option <code>--global</code> means that you are setting up your credentials for not only the current repository you are working on, but all future repositories you create. Whenever you want to set a different email, just run that command again. </p>
+						<p>
+							The folder GithubTutorial we create just now will be your local repository, which is simply the project directory on your own computer. That is different from a remote repository, which stores the same copy of your code on a server accessible to your collaborators so that they can view, access, make modifications, etc. to the project. We haven’t created a remote repository yet, so let’s login into Github and make a remote repo called GithubTutorial <a href="https://github.com/new">here</a>. To connect the Github remote repository with the local repository GithubTutorial on our computer, we follow the instructions on Github and entere these into the terminal:</p>
+						<pre><code>echo "# GithubTutorial" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/<yourUserName>/GithubTutorial.git
+git push -u origin master</code></pre>
+						<p>
+							The first command essentially creates a new file within the current working directory (GithubTutorial) called REAME.md, with the content “# GithubTutorial”. <code>git init</code> initializes a hidden directory called “.git” in your project directory. Then, we add the newly created file README.md and commit it to the local repository. <code> git remote add origin </code> just points to the link of your project on Github, and connect your local repository with your remote repository. The last command tells Git that you want to push all the changes you have made to the local repository to the remote repository. After this, your Github remote repository will reflect the change you just made - which is a new README.md file. You should also see something similar to this in your terminal (note that you might be asked to enter your password to authenticate the Github repo):
+						</p>
+						<hr>
+						<img src="https://i.ibb.co/k5KhXNM/terminal-output.png" class="img-responsive" width="600px">
+						<hr>
+						<h2 class="section-heading"> Basic Workflow </h2>
+						<p> If you run: git status to check the status of your repository (and you will use this command quite often), you will see something like this:</p>
+						<img src="https://i.ibb.co/bBBKcmT/terminal-no-commit.png" class="img-responsive" width="600px">
+						<p>We will explain the concept of “branching” later on, but now you see that Git says we have “nothing to commit”. This is because we just pushed the latest commit and haven’t made any further changes to the project, so now both the local repository and the remote repository are exactly the same. A Git commit is a snapshot of the current state of the repository. If you then decide to remove/edit/add files, essentially changing the state of the repository, the repository’s state will be different from its most recent commit, and the next commit created will reflect such changes. </p>
+						<h3> <strong> Git Add </strong> </h3>
+						<p> For instance, let’s create a new text file called myName.txt within this repository that contains your name.</p>
+						<img src="https://i.ibb.co/7WrDyZ7/add.png" class="img-responsive" width="600px">
+						<p>You can see with the ls command (which list all files in current directory) that we successfully created a new text file. The git status command shows that we have an untracked file called myName.txt, and it suggests running git add to add that file to the local repository. </p>
+						<img src="https://i.ibb.co/9gWzjpf/added.png" class="img-responsive" width="600px">
+						<blockquote class="blockquote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote>
+
+					</div>
+				</div>
+			</div>
+			<hr>
+		</main>
+		<div id="spider-background"></div>
+
+		<footer></footer>
+</body>

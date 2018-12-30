@@ -1,0 +1,83 @@
+.jumbotron {
+	opacity: 0.9;
+  background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.8)), url("https://i.ibb.co/wCNF9cb/github.png");
+  background-size: cover;
+  text-align: center;
+  color: white;
+  height: 450px;
+}
+
+.jumbotron-text {
+	width: 50%;
+	margin: auto;
+	color: white;
+	margin-top: 200px;
+}
+
+/*.container {
+	font-family: 'Open Sans', sans-serif;
+}*/
+h1 {
+	color: #38859D;
+	font-family: 'Trocchi',
+	serif; font-size: 45px;
+	font-weight: normal;
+	line-height: 48px;
+}
+
+h2 {
+	color: #d54d7b;
+	font-size: 35px;
+	font-weight: normal; 
+	text-shadow: 0 1px 1px #fff;
+}
+
+.container {
+	color: #212121;
+	font-size: 18px;
+	font-family: "Libre Baskerville", serif;
+	line-height: 30px;
+}
+
+nav[data-toggle='toc'] {
+  margin-top: 30px;
+}
+
+/* small screens */
+@media (max-width: 768px) {
+  /* override the Affix plugin so that the navigation isn't sticky */
+  nav.affix[data-toggle='toc'] {
+    position: static;
+  }
+
+  /* PICK ONE */
+  /* don't expand nested items, which pushes down the rest of the page when navigating */
+  nav[data-toggle='toc'] .nav .active .nav {
+    display: none;
+  }
+  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
+  nav[data-toggle='toc'] .nav .nav {
+    display: block;
+  }
+}
+
+.affix {
+  top: 0;
+  width: 100%;
+}
+
+.affix-top {
+  width: 100%;
+}
+
+.affix-bottom {
+  position: absolute;
+  width: 100%;  
+}
+
+.green {
+	color: green;
+}
+
+
+

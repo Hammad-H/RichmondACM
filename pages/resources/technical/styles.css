@@ -1,0 +1,24 @@
+.description {
+	text-align: center;
+	margin: 10px;
+}
+
+h2 { 
+	color: #2FB5DE;
+	 font-family: 'Bitter', serif;
+	font-weight: normal;
+	text-shadow: 0 1px 1px #fff;
+}
+
+.sidebar {
+	margin-top: 50px;
+}
+
+h1 {
+	color: #38859D;
+	font-family: 'Trocchi',
+	serif; font-size: 45px;
+	font-weight: normal;
+	line-height: 48px;
+	margin: 0;
+}
