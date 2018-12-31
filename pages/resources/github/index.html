@@ -35,96 +35,143 @@
 </head>
 
 <body data-spy="scroll" data-target="#toc">
-		<header></header>
-		<main>
-			<!-- Post Content -->
-			<div class="jumbotron jumbotron-fluid">
-				<div class="container">
-					<div class="jumbotron-text">
-						<h1 class="display-4">Github Tutorial</h1>
-						<p> Github is a helpful version control tool that enables easy collaboration among developers. </p>
-					</div>
+	<header></header>
+	<main>
+		<!-- Post Content -->
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<div class="jumbotron-text">
+					<h1 class="display-4">Github Tutorial</h1>
+					<p> Github is a helpful version control tool that enables easy collaboration among developers. </p>
 				</div>
 			</div>
-			<div class="container" data-spy="scroll" data-target="#toc">
-				<div class="row">
-					<!-- sidebar, which will move to the top on a small screen -->
-		  		<div class="col-xs-2">
-		  		 	<nav id="toc" data-spy="affix" data-offset-top="450" data-offset-bottom="100" data-toggle="toc"></nav>
-		  		</div>
-					<div class="col-lg-10 col-sm-8 mx-auto">
-						<h2 class="section-heading"> Why Github? </h2>
-						<p>Imagine you are working with your friend on a coding project, and each of you works on a separate feature. Some problems will arise: if both of you need to edit the same file, you might have to meet up every time to pair-program, or inefficiently wait and take turn to edit the file. Further, if you are not happy with a change you make, it can be frustrating to backtrack to get the previous iteration. </p>
+		</div>
+		<div class="container" data-spy="scroll" data-target="#toc">
+			<div class="row">
+				<!-- sidebar, which will move to the top on a small screen -->
+				<div class="col-xs-2">
+					<nav id="toc" data-spy="affix" data-offset-top="450" data-offset-bottom="100" data-toggle="toc"></nav>
+				</div>
+				<div class="col-lg-10 col-sm-8 mx-auto">
+					<h2 class="section-heading"> Why Github? </h2>
+					<p>Imagine you are working with your friend on a coding project, and each of you works on a separate feature. Some problems will arise: if both of you need to edit the same file, you might have to meet up every time to pair-program, or inefficiently wait and take turn to edit the file. Further, if you are not happy with a change you make, it can be frustrating to backtrack to get the previous iteration. </p>
 
-						<p>Github solves these problems for you! As a type of distributed version control system, it allows you to: </p>
-						<ul>
-							<li> <i class="fas fa-check green"></i>  Collaborate with multiple developers on a shared codebase </li>
-							<li> <i class="fas fa-check green"></i>  Track changes over time</li>
-							<li> <i class="fas fa-check green"></i>  Revert files to their previous state</li>
-							<li> <i class="fas fa-check green"></i>  Merge code from different team members</li>
-							<li> <i class="fas fa-check green"></i>  Resolve code conflicts </li>
-						</ul>
-						<p> and more. It’s a very popular tool for personal/open source projects! Plus, Github is completely free if you are fine with having public repositories. Today, we will familiarize ourselves with the basic workflow of Github. </p>
-						<hr>
-						<h2 class="section-heading"> Set up </h2>
+					<p>Github solves these problems for you! As a type of distributed version control system, it allows you to: </p>
+					<ul>
+						<li> <i class="fas fa-check green"></i>  Collaborate with multiple developers on a shared codebase </li>
+						<li> <i class="fas fa-check green"></i>  Track changes over time</li>
+						<li> <i class="fas fa-check green"></i>  Revert files to their previous state</li>
+						<li> <i class="fas fa-check green"></i>  Merge code from different team members</li>
+						<li> <i class="fas fa-check green"></i>  Resolve code conflicts </li>
+					</ul>
+					<p> and more. It’s a very popular tool for personal/open source projects! Plus, Github is completely free if you are fine with having public repositories. Today, we will familiarize ourselves with the basic workflow of Github. </p>
+					<hr>
+					<h2 class="section-heading"> Set up </h2>
 
-						<p>If you haven’t had a Github account, you will need to get one <a href="https://github.com/">here</a>. You will also need to download and install github <a href="https://git-scm.com/downloads">here</a>.</p>
+					<p>If you haven’t had a Github account, you will need to get one <a href="https://github.com/">here</a>. You will also need to download and install github <a href="https://git-scm.com/downloads">here</a>.</p>
 
-						<p>We’ll mostly be working with Git from the terminal. Don’t worry if you’re not too familiar with using the terminal. These are the four basic commands you can learn for this tutorial:</p>
-						<ul>
-							<li> <code> pwd</code>: Print the path of 
-							the current working directory folder.</li>
-							<li> <code> ls </code>:  List all the files/folders in the current directory.</li>
-							<li>  <code> cd subfolder_name</code>: Navigate to a subfolder 
-							of the current directory.</li>
-							<li> <code> mkdir new_folder_name</code>: Create a new subfolder inside the current directory with the specified name.</li>
-						</ul>
-						<p>
+					<p>We’ll mostly be working with Git from the terminal. Don’t worry if you’re not too familiar with using the terminal. These are the four basic commands you can learn for this tutorial:</p>
+					<ul>
+						<li> <code> pwd</code>: Print the path of 
+						the current working directory folder.</li>
+						<li> <code> ls </code>:  List all the files/folders in the current directory.</li>
+						<li>  <code> cd subfolder_name</code>: Navigate to a subfolder 
+						of the current directory.</li>
+						<li> <code> mkdir new_folder_name</code>: Create a new subfolder inside the current directory with the specified name.</li>
+					</ul>
+					<p>
 						Let’s open the terminal and create a folder within Desktop for our Github project, called GithubTutorial. Here’s a picture of the step by step process.
-					  </p>
-					  <img src="https://i.ibb.co/Y0MPkqH/Screen-Shot-2018-12-30-at-3-17-39-AM.png" class="img-responsive">
-					  <hr>
-					  <p>Then, type in these two commands but use your real name and email address: </p>
-					  <pre><code>git config --global user.name "Tracy Nguyen"
+					</p>
+					<img src="https://i.ibb.co/Y0MPkqH/Screen-Shot-2018-12-30-at-3-17-39-AM.png" class="img-responsive">
+					<hr>
+					<p>Then, type in these two commands but use your real name and email address: </p>
+					<pre><code>git config --global user.name "Tracy Nguyen"
 git config --global user.email "xxx@richmond.edu"</code></pre>
-						<p>
-							Basically, these commands tell Github who you are, so that every commit you make for repositories on your local machine is attributed to your github account. The configuration option <code>--global</code> means that you are setting up your credentials for not only the current repository you are working on, but all future repositories you create. Whenever you want to set a different email, just run that command again. </p>
-						<p>
-							The folder GithubTutorial we create just now will be your local repository, which is simply the project directory on your own computer. That is different from a remote repository, which stores the same copy of your code on a server accessible to your collaborators so that they can view, access, make modifications, etc. to the project. We haven’t created a remote repository yet, so let’s login into Github and make a remote repo called GithubTutorial <a href="https://github.com/new">here</a>. To connect the Github remote repository with the local repository GithubTutorial on our computer, we follow the instructions on Github and entere these into the terminal:</p>
-						<pre><code>echo "# GithubTutorial" >> README.md
+					<p>Basically, these commands tell Github who you are, so that every commit you make for repositories on your local machine is attributed to your github account. The configuration option <code>--global</code> means that you are setting up your credentials for not only the current repository you are working on, but all future repositories you create. Whenever you want to set a different email, just run that command again. </p>
+					<p>The folder GithubTutorial we create just now will be your local repository, which is simply the project directory on your own computer. That is different from a remote repository, which stores the same copy of your code on a server accessible to your collaborators so that they can view, access, make modifications, etc. to the project. We haven’t created a remote repository yet, so let’s login into Github and make a remote repo called GithubTutorial <a href="https://github.com/new">here</a>. To connect the Github remote repository with the local repository GithubTutorial on our computer, we follow the instructions on Github and entere these into the terminal:</p>
+					<pre><code>echo "# GithubTutorial" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/<yourUserName>/GithubTutorial.git
 git push -u origin master</code></pre>
-						<p>
-							The first command essentially creates a new file within the current working directory (GithubTutorial) called REAME.md, with the content “# GithubTutorial”. <code>git init</code> initializes a hidden directory called “.git” in your project directory. Then, we add the newly created file README.md and commit it to the local repository. <code> git remote add origin </code> just points to the link of your project on Github, and connect your local repository with your remote repository. The last command tells Git that you want to push all the changes you have made to the local repository to the remote repository. After this, your Github remote repository will reflect the change you just made - which is a new README.md file. You should also see something similar to this in your terminal (note that you might be asked to enter your password to authenticate the Github repo):
-						</p>
-						<hr>
-						<img src="https://i.ibb.co/k5KhXNM/terminal-output.png" class="img-responsive" width="600px">
-						<hr>
-						<h2 class="section-heading"> Basic Workflow </h2>
-						<p> If you run: git status to check the status of your repository (and you will use this command quite often), you will see something like this:</p>
-						<img src="https://i.ibb.co/bBBKcmT/terminal-no-commit.png" class="img-responsive" width="600px">
-						<p>We will explain the concept of “branching” later on, but now you see that Git says we have “nothing to commit”. This is because we just pushed the latest commit and haven’t made any further changes to the project, so now both the local repository and the remote repository are exactly the same. A Git commit is a snapshot of the current state of the repository. If you then decide to remove/edit/add files, essentially changing the state of the repository, the repository’s state will be different from its most recent commit, and the next commit created will reflect such changes. </p>
-						<h3> <strong> Git Add </strong> </h3>
-						<p> For instance, let’s create a new text file called myName.txt within this repository that contains your name.</p>
-						<img src="https://i.ibb.co/7WrDyZ7/add.png" class="img-responsive" width="600px">
-						<p>You can see with the ls command (which list all files in current directory) that we successfully created a new text file. The git status command shows that we have an untracked file called myName.txt, and it suggests running git add to add that file to the local repository. </p>
-						<img src="https://i.ibb.co/9gWzjpf/added.png" class="img-responsive" width="600px">
-						<blockquote class="blockquote">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote>
+					<p>The first command essentially creates a new file within the current working directory (GithubTutorial) called REAME.md, and prints out “# GithubTutorial” to it. <code>git init</code> initializes a hidden directory called “.git” in your project directory. Then, we add the newly created file README.md and commit it to the local repository. <code> git remote add origin </code> just points to the link of your project on Github, and connect your local repository with your remote repository. The last command tells Git that you want to push all the changes you have made to the local repository to the remote repository. After this, your Github remote repository will reflect the change you just made - which is a new README.md file. You should also see something similar to this in your terminal (note that you might be asked to enter your password to authenticate the Github repo):</p>
+					<hr>
+					<img src="https://i.ibb.co/k5KhXNM/terminal-output.png" class="img-responsive" width="600px">
+					<hr>
+					<h2 class="section-heading"> Basic Workflow </h2>
+					<p> If you run <code>git status</code> to check the status of your repository (and you will use this command quite often), you will see something like this:</p>
+					<img src="https://i.ibb.co/bBBKcmT/terminal-no-commit.png" class="img-responsive" width="600px">
+					<p>We will explain the concept of “branching” later on, but now you see that Git says we have “nothing to commit”. This is because we just pushed the latest commit and haven’t made any further changes to the project, so now both the local repository and the remote repository are exactly the same. A <strong> Git commit </strong> is a snapshot of the current state of the repository. If you then decide to remove/edit/add files, essentially changing the state of the repository, the next commit you created will reflect such changes. Git records the history of your commits, so that if needed you can trace back each iteration of the projects to see how files are added/changed. </p>
+					<p> For instance, let’s create a new text file called myName.txt within this repository that contains your name.</p>
+					<pre><code>echo "Tracy Nguyen" >> myName.txt</code></pre>
+					<!-- <img src="https://i.ibb.co/7WrDyZ7/add.png" class="img-responsive" width="600px"> -->
+					<p>You can use the <code>ls</code> command to check that we successfully created a new text file. Typing <code>git status</code> will also show that we have an untracked file called myName.txt. Git suggests running <code> git add </code> to add that file to the Git staging area, essentially tracking that file.</p>
+					<pre><code>git add myName.txt</code></pre>
+					<p>Every time you create a new file, or make changes to an existing files, these changes are not registered automatically by Git - which makes sense because in the process of development, sometimes you created/changed files and later on decided they are not necessary. When you know what file changes to include, you need to run <code>git add file_name</code> to let Git know that those file changes are ready. To add multiple files, 2 for instance, you can type <code>git add file_1 file_2</code>, separated by a space. At this point, you're probably wondering: what if you have 50, 100 or 1000 files to add instead of just one? Luckily, you don't have to type all of the file names. <code>git add -A</code> and <code>git add --all</code> both accomplish the same thing, that is to add all the changed/created files in your repository at once. If you ever want to undo adding a file, you just need to run:</p>
+					<pre><code>git reset file-you-don't-need-anymore</code></pre>
+					<p> Running <code>git status</code> again will show that we have a new file added to the repository called myName.txt. Now, we need to create a new commit that contains this new change:</p>
+					<pre><code> git commit -m "Add a text file" </code></pre>
+					<p> This command commits all the files we tracked to the local repository. The <code>-m</code> option, which stands for message, is for you to enter a message describing the commit. A commit message, usually written in present tense, describes an action/change you made clearly and concisely. This way, when you later look through the history of commits to review past commit for instance, you can find what you want more easily. </p>
+					<p> Now that we're happy with our changes on the local repository and want to update the remote repository as well, let's "push" the commit to the remote repo with the command <code>git push</code>. Before that, we need to grab (pull) all the updates from the remote repository using <code>git pull</code>. In our tutorial example, because you have been working solo and the remote repository does not contain any new changes compared to our local repo, <code>git pull</code> does not actually pull any new content. However, in the real world when you're working with teammates on a shared project, <code>git pull</code> is often necessary. Imagine you are working on feature X on your local repo, and during that time, your friend has finished working on feature Y and pushed his changes to the remote repo. Now, when you finish with feature X and want to push the commit, the local repo on your computer is outdated because it doesn't contain the feature Y that your friend has pushed. Therefore, you need to pull the version on the remote repo first, solve any code conflicts if present, and double check if your product runs as expected with both your changes and your collaborators' changes. After all those steps, then it's safe to push your commit.</p>
+					<pre><code>git pull origin master
+git push origin master</code></pre>
+					<p> The output after <code>git pull</code> should be "Already up to date.", because there has been no new changes to the remote repository compared to our local repo. The <code> origin master </code> part only specifies that we want to pull from and push to our default main branch, the master branch. After those two commands, your local and remote repo should by synced, and the myName.txt file should also appear on the Github remote repo. (If you're lost up til now, check out this step-by-step <a href="https://i.ibb.co/vZpYfnj/progress.png" target="_blank">pic</a>).</p>
+					<p> Let's review the commands we learn up til now, in the order of the workflow:</p>
+					<ol>
+						<li><code> git add -A</code> or <code> git add -all </code> to add the changes we make</li>
+						<li><code> git reset unneeded-file </code> remove a file that you mistakenly added but don't want to include</li>
+						<li><code> git commit -m "commit_message"</code> commits the changes to the repo.</li>
+						<li><code> git pull </code> grabs the latest snapshot of the remote repository</li>
+						<li><code> git push </code> pushes the commit to the remote repo.</li>
+					</ol>
+					<h2>Git Branches</h2>
+					<p>We have mentioned Git branches in the previous sections. This is one of the most useful features of Git; it allows you and your team to develop multiple versions of your project simultaneously. If you want to add a new feature to a website, for instance, you would want to avoid modifying directly the current stable, working code. Instead, you create a new branch dedicated to that new feature you are developing. Whatever changes you make to that branch won't be reflected on the main master branch, at least until you have tested the application exhaustively and decide to merge the branches. The main default branch of Git is always the "master" branch. If you run <code>git branch</code> now, the terminal output will look like this: </p>
+					<pre><code>$ git branch
+*master</code></pre>
+					<p>This means that there is currently only one branch called "master", and the asterisk indicates that you are on that branch. To create a new branch, you will use the command <code>git branch branch-name</code>. For instance, let's create a branch that adds your age to the file myName.txt.</p>
+					<pre><code>git branch add-age</code></pre>
+					<p> However, this only creates a branch called add-age, but you are still on the "master" branch. Type </p>
+					<pre><code>git checkout add-age</code></pre>
+					<p> to switch to the add-age branch. If you run <code>git branch</code> now, you can see that the asterisk is now in front of the add-age branch, which means you are on that branch. </p>
+					<img src="https://i.ibb.co/82P2xDz/branch.png" class="img-responsive" width="600px">
+					<p>Now, when still on the add-age branch, modify the myName.txt file to also contains your age on the second line. Running <code>git status</code> will give you something like this:</p>
+					<img src="https://i.ibb.co/QJ0dJ5H/modified.png" class="img-responsive" width="600px">
+					<p> It recognizes that the myName.txt file has been modified, but is still untracked. As a little exercise, try adding and committing the file to the repository just like we did in the previous section. After you're done, run these two commands:</p>
+					<pre><code>git pull origin master
+git push origin add-age</code></pre>
+					<p>This is a little bit different from what we did before. We still pull from the master branch (<code>origin master</code>), but we push to the add-age branch (<code>origin add-age</code>) instead. While we still need to get the latest version of the project from the master branch in case our collaborators have pushed changes to it, we are not ready yet to integrate our changes into the master branch. In the real world, if you are developing a new feature on a separate branch, it is safe to push each iteration of that feature to the branch you are working on (in this case, the add-age branch). However, you should only integrate it into the working application on the master branch whenever the feature is complete and for sure will not break the working code.</p>
+					<img src="https://i.ibb.co/2WKNCFp/add-age.png" class="img-responsive" width="600px">
+					<p>Notice that the terminal output suggests you can create a pull request for add-age through a given link. Whenever you feel like the branch is ready to be merged with the master branch, you can create a pull request on Github. This means you are asking the owner of the Github repo to accept the changes from your branch. You can try creating a new pull request for the add-age branch, then go to the pull requests tab on Github to accept that request. </p>
+					<img src="https://i.ibb.co/Vgv4rw8/pull-request.png" class="img-responsive" width="600px">
+					<p>Alternatively, you can also do that through the terminal with these steps:</p>
+					<ul>
+						<li><code>git checkout master </code> Switch to the master branch</li>
+						<li><code>git merge add-age</code> Merge the add-age branch with the master branch</li>
+						<li><code>git branch -d add-age</code> Delete the add-age branch now that you don't need it.</li>
+						<li><code>git push origin master</code>Push the changes to the master branch.</li>
+					</ul>
+					<p>Now, the updated file myName.txt on the Github remote repo will contain your age information.</p>
+					<h2>Collaboration</h2>
+					<p>Sometimes, when joining an open source project on Github, you don't create a new repository with new files from scratch like our example above, but instead need to clone an existing project. In that case, you can make an empty folder on your computer, navigate inside the folder with the terminal, and get the URL of the Github project as seen in this picture:</p>
+					<img src="https://i.ibb.co/ZM2G9Qh/clone.png" class="img-responsive" width="600px">
+					<p>Using that URL, you can run the command below (replacing the URL of my Github repo with the one you want to clone):</p>
+					<pre><code>git clone https://github.com/tramnguyenJC/GithubTutorial.git</code></pre>
+					<p>That sets up a local repository on your computer, containing the same folders/files as the Github remote repository of the project. Note that this is different from downloading the project as a ZIP file and unzipping it to a folder, because in that case the folder is not yet a Git repository, and you will see this sort of error if you attempt to run any Git command:</p>
+					<pre><code>fatal: not a git repository (or any of the parent directories): .git</code></pre>
+					<p> Also, if you are working with other people on a Github project, you can add them as collaborators through the Settings/Collaborators tab on Github. Look up their Github user name and send them an invitation for the project.</p>
+					<img src="https://i.ibb.co/v1z672W/collaborators.png" class="img-responsive" width="600px">
+					<p>Regarding deployment of website-related projects, if you're hesitating about purchasing a domain because of the cost, you can publish your website as a Github page for free! On the Settings tab of your Github project, you can scroll down and find the option for Github Pages, then select the Source as the master branch as the picture below. However, if you prefer Heroku deployment (which also has a free plan), you can checkout our article on Heroku here.</p>
+					<img src="https://i.ibb.co/xFgp4V1/pages.png" class="img-responsive" width="600px">
 
-					</div>
+					<h2> Source </h2>
+					This tutorial is influenced by the article <i> Most basic Git commands with examples</i>, written by Sviatoslav A. on RubyGarage [<a href="https://rubygarage.org/blog/most-basic-git-commands-with-examples">link</a>].
 				</div>
 			</div>
-			<hr>
-		</main>
-		<div id="spider-background"></div>
+		</div>
+		<hr>
+	</main>
+	<div id="spider-background"></div>
 
-		<footer></footer>
-</body>
+				<footer></footer>
+			</body>

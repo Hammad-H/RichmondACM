@@ -32,6 +32,9 @@ h2 {
 	text-shadow: 0 1px 1px #fff;
 }
 
+h3 {
+	font-style: italic;
+}
 .container {
 	color: #212121;
 	font-size: 18px;
