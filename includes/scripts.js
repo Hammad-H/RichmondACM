@@ -11,7 +11,7 @@ function getLevel(){
 		case "3": return "../../../";
 		case "4": return "../../../../";
 	}
-	alert($('meta[name=level]').attr("content"));
+	// alert($('meta[name=level]').attr("content"));
 }
 
 function setHeader(dir) {
