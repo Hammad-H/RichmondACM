@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+
+<head>
+	<!--Sets meta types about the website-->
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="level" content="4" />
+
+	<!--Sets title and favicon of the page-->
+	<title>ACM @ UR</title>
+	<link rel="icon" type="image/png" href="../../../../includes/UR-ACM-Logo.png">	
+
+	<!--Sets title of the page-->
+	<meta http-equiv="description" content="This is a crawlable description" />
+
+	<!--Bootstrap + Query Implementation -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script>
+
+	<!--FontAwesome and Google Fonts -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+	<!--Pulls in ALL CUSTOM CSS Stylesheet-->
+	<style type="text/css"> @import url("../../../../includes/header-styles.css");</style>
+	<style type="text/css"> @import url("../../../../includes/shared-styles.css");</style>
+	<style type="text/css">	@import url("styles.css"); </style>
+
+	<!--Pulls in CUSTOM JS Script-->
+	<script type="text/javascript" src="../../../../includes/scripts.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+	<header></header>
+	<main>
+		<!-- Post Content -->
+		<div class="container">
+			<div class="header-text">
+				<h1 class="display-4">Intro to Heroku</h1>
+			</div>
+		</div>
+
+		<div class="container" data-spy="scroll" data-target="#toc">
+			<div class="row">
+				<!-- sidebar, which will move to the top on a small screen -->
+				<div class="col-xs-2">
+					<nav id="toc" data-spy="affix" data-offset-top="450" data-offset-bottom="100" data-toggle="toc"></nav>
+				</div>
+				<div class="col-lg-10 col-sm-8 mx-auto">
+					<h2 class="section-heading"> What is Heroku? </h2>
+					<p>Heroku is a Platform as a Service which lets developers deploy their webapps (PHP, Node.js, Flask/Django, Rails, etc.) on the Internet from the cloud! Other alternatives to Heroku you might have heard of are <a href="https://aws.amazon.com/">Amazon Web Services</a>, or other Web hosting service such as <a href="https://www.bluehost.com/">BlueHost</a>, but these services are more costly and complicated to use. One downside of Heroku, however, is that because it's free and resources are limited, your site can be 'asleep' during inactive hours. If you don't mind that then Heroku will be an excellent, affordable choice for you to deploy your personal projects! </p>
+					<p>In this tutorial, we will learn how to deploy a static website with Heroku.</p>
+					<hr>
+					<h2 class="section-heading"> Set up </h2>
+					<p> If you haven't had a Heroku account, you can sign up <a href="https://www.heroku.com/">here</a>. You will also need to download the <a href="https://devcenter.heroku.com/articles/heroku-cli">Heroku CLI</a> to manage your Heroku account from the terminal.</p>
+					<p> Since we're learning to deploy a static website on Heroku, we need the source code for the website first. For this project, we can use a Bootstrap resume website template available here <a href="https://github.com/tramnguyenJC/heroku_acm_workshop">Github link</a>. You can then fork that Github project for the Bootstrap template and connects it with a local Git repository on your computer. If you're not familiar with Github or the terminal, please first checkout <a href="../github/index.html">this Github tutorial</a> written by ACM members, especially the <a href="../github/index.html#collaboration">Collaboration</a> section. If you already have your own Github project for a static website, then feel free to just use yours!</p>
+				    <hr>
+					<h2 class="section-heading"> Modify your application </h2>
+					<p>Because Heroku is meant to host apps (Node.js/PHP/Python) instead of static websites, we will need to trick Heroku into thinking that our website is a PHP app. First, navigate to your project root directory, and rename your <code>index.html</code> (or whichever your main HTML file is) file to <code>home.html</code> with the following terminal command:</p>
+					<pre><code>mv index.html home.html</code></pre>
+					<p>Next, we can add a PHP file that does nothing to your application, but just exists to make Heroku think that we're deploying a PHP app:</p>
+					<pre><code>echo '\&lt;?php include_once("home.html"); ?\&gt;' &gt; index.php</code></pre>
+					<p>The above command creates a <i>index.php</i> file that redirects the broswer to <i>home.html</i>. Next, we will create a <i>composer.json</i> file, which is usually used to manage dependencies in a real PHP app, and is required by Heroku for deploying PHP apps. In our case, because we don't actually need any dependency, the <i>composer.json</i> file can contain a single line <code>{}</code>. Type this command into the terminal to create the file:</p>
+					<pre><code>echo '{}' > composer.json</code></pre>
+					<p>Let's add all the files, create a commit for this change and push to the remote repository:</p>
+					<pre><code>git add -A
+git commit -m "Added a Bootstrap resume template website"
+git push origin master</code></pre>
+					<p></p>
+					<h2>Deploying to Heroku</h2>
+					<p>We have created a commit and push to the Github remote repository, and now we will push the same commit (with all the files included) onto the Heroku platform. First, login to Heroku in the terminal:</p>
+					<pre><code>heroku login</code></pre>
+					<p>Enter your credentials for Heroku. After you are logged in, create a new Heroku app with this command:</p>
+					<pre><code>heroku apps:create resume-template</code></pre>
+					<p>I named the app resume-template but you should change it your name or something else, because if the name is already taken, Heroku will notify you (and this makes sense because we don't want the same URL linked to different projects). After you have a unique name with no spaces in between, the terminal output should look like this:</p>
+					<img src="
+					https://i.ibb.co/rcZzZjh/heroku.png" class="img-responsive" width="600px">
+					<p>The first link (blue-ish) is the link where you website will be live after you deploy, and the second is the associated Heroku Github git URL. Essentially, Heroku adds an empty Heroku Git repository to your local repository, and you can push a commit to this remote Heroku directory for it to take effect on the live websive. Now, you're ready to deploy to Heroku with:</p>
+					<pre><code>git push heroku master</code></pre>
+					<p>After that, you should see your webapp live at the link https://[your-app-name].herokuapp.com/! Later, whenever you make changes to your Github project and want those changes to take effect on the live Heroku site, use these commands: </p>
+					<pre><code>git add -A
+git commit -m "Your commit message"
+git push heroku master</code></pre>
+					<p>Since we're just experimenting with Heroku and don't really need the Bootstrap resume website live, we can delete the app with this command:</p>
+					<pre><code>heroku apps:destroy</code></pre>
+					<img src="
+					https://i.ibb.co/LRVG58d/destroy.png" class="img-responsive" width="600px">
+					<h2>Other resources</h2>
+					<p>Today we just explored the basics of Heroku by deploying a static website. Deploying a PHP, Python Flask, Node.js webapp, etc. is also not very complicated. Here are some tutorial links for deploying different types of webapps that you might find useful:</p>
+					<ol>
+						<li>Python Flask app: <a href="https://medium.com/the-andela-way/deploying-a-python-flask-app-to-heroku-41250bda27d0">This tutorial</a> is helpful and clear. You can follow along the tutorial using the author's API application <code>bucket_api_heroku</code> hosted on Github, but if you have your own application it should still be pretty easy to apply the tutorial to your project.</li>
+						<li>Python Django: <a href="https://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html">This tutorial</a> will be helpful, though if you're using Django 2.0 then <a href="https://medium.com/@qazi/how-to-deploy-a-django-app-to-heroku-in-2018-the-easy-way-48a528d97f9c">this tutorial</a> offers a much simpler way. </li>
+						<li>PHP webapp: <a href="https://devcenter.heroku.com/articles/deploying-php">This tutorial</a></li>, though if your application involves a MySQL database then <a href="https://scotch.io/@phalconVee/deploying-a-php-and-mysql-web-app-with-heroku">this tutorial</a> might also be helpful.
+						<li>Node.js with a MongoDB database: <a href="https://medium.com/coderbastion/tips-for-deploying-nodejs-mongodb-apps-on-heroku-77c1366a922e">This tutorial</a></li>
+						<li>Ruby on Rails: <a href="https://devcenter.heroku.com/articles/getting-started-with-rails5">This tutorial</a></li>
+					</ol>
+					<h2> Source </h2>
+					This tutorial is influenced by the article <i> How to Deploy a Static Website to Heroku</i>, written by Aditya Niloi on Medium [<a href="https://medium.com/@adityaniloi/how-to-deploy-a-static-website-to-heroku-49d55e07cb94">link</a>].
+				</div>
+			</div>
+		</div>
+		<hr>
+	</main>
+	<div id="spider-background"></div>
+
+				<footer></footer>
+			</body>

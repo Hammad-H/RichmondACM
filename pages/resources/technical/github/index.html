@@ -5,11 +5,11 @@
 	<!--Sets meta types about the website-->
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<meta name="level" content="3" />
+	<meta name="level" content="4" />
 
 	<!--Sets title and favicon of the page-->
 	<title>ACM @ UR</title>
-	<link rel="icon" type="image/png" href="../../../includes/UR-ACM-Logo.png">	
+	<link rel="icon" type="image/png" href="../../../../includes/UR-ACM-Logo.png">	
 
 	<!--Sets title of the page-->
 	<meta http-equiv="description" content="This is a crawlable description" />
@@ -26,12 +26,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 	<!--Pulls in ALL CUSTOM CSS Stylesheet-->
-	<style type="text/css"> @import url("../../../includes/header-styles.css");</style>
-	<style type="text/css"> @import url("../../../includes/shared-styles.css");</style>
+	<style type="text/css"> @import url("../../../../includes/header-styles.css");</style>
+	<style type="text/css"> @import url("../../../../includes/shared-styles.css");</style>
 	<style type="text/css">	@import url("styles.css"); </style>
 
 	<!--Pulls in CUSTOM JS Script-->
-	<script type="text/javascript" src="../../../includes/scripts.js"></script>
+	<script type="text/javascript" src="../../../../includes/scripts.js"></script>
 </head>
 
 <body data-spy="scroll" data-target="#toc">
@@ -95,7 +95,7 @@ git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/<yourUserName>/GithubTutorial.git
 git push -u origin master</code></pre>
-					<p>The first command essentially creates a new file within the current working directory (GithubTutorial) called REAME.md, and prints out “# GithubTutorial” to it. <code>git init</code> initializes a hidden directory called “.git” in your project directory. Then, we add the newly created file README.md and commit it to the local repository. <code> git remote add origin </code>  connects your local repository with your remote repository, as specified by the link to your Github project. The last command tells Git that you want to push all the changes you have made from the local repository to the remote repository. After this, your Github remote repository will reflect the change you just made - which is a new README.md file. You should also see something similar to this in your terminal (note that you might be asked to enter your password to authenticate the Github repo):</p>
+					<p>The first command essentially creates a new file within the current working directory (GithubTutorial) called REAME.md, and prints out “# GithubTutorial” to it. <code>git init</code> initializes a hidden directory called “.git” in your project directory. Then, we <code>git add</code> the newly created file README.md and <code>git commit</code> it to the local repository (this step is just separate from the connecting part, so in the future if you haven't created any new file in the new repo, you can skip this). <code> git remote add origin </code> connects your local repository with your remote repository, as specified by the link to your Github project. The last command, <code>git push</code>, tells Git that you want to push all the changes you have made from the local repository to the remote repository. After this, your Github remote repository will reflect the change you just made - which is a new README.md file. You should also see something similar to this in your terminal (note that you might be asked to enter your password to authenticate the Github repo):</p>
 					<hr>
 					<img src="https://i.ibb.co/k5KhXNM/terminal-output.png" class="img-responsive" width="600px">
 					<hr>
@@ -152,16 +152,20 @@ git push origin add-age</code></pre>
 						<li><code>git push origin master</code>Push the changes to the master branch.</li>
 					</ul>
 					<p>Now, the updated file myName.txt on the Github remote repo will contain your age information.</p>
-					<h2>Collaboration</h2>
-					<p>Sometimes, when joining an open source project on Github, you don't create a new repository with new files from scratch like our example above, but instead need to clone an existing project. In that case, you can make an empty folder on your computer, navigate inside the folder with the terminal, and get the URL of the Github project as seen in this picture:</p>
-					<img src="https://i.ibb.co/ZM2G9Qh/clone.png" class="img-responsive" width="600px">
+					<a name="collaboration"><h2>Collaboration</h2></a> 
+					<p>Sometimes, when joining an open source project on Github, you don't create a new repository with new files from scratch like our example above, but instead need to clone an existing project. In that case, you can make an empty folder on your computer, navigate inside the folder with the terminal, and get the URL of the Github project (in the green box of the pic below):</p>
+					<img src="https://i.ibb.co/dmsF38S/git.png" class="img-responsive" width="600px">
 					<p>Using that URL, you can run the command below (replacing the URL of my Github repo with the one you want to clone):</p>
 					<pre><code>git clone https://github.com/tramnguyenJC/GithubTutorial.git</code></pre>
-					<p>That sets up a local repository on your computer, containing the same folders/files as the Github remote repository of the project. Note that this is different from downloading the project as a ZIP file and unzipping it to a folder, because in that case the folder is not yet a Git repository, and you will see this sort of error if you attempt to run any Git command:</p>
-					<pre><code>fatal: not a git repository (or any of the parent directories): .git</code></pre>
+					<p>That sets up a local repository on your computer, containing the same folders/files as the Github remote repository of the project, <strong>and connects that local repository to the remote repository you clone from</strong>. Note that when you use <code>git clone</code>, you can only push to the main branch master if you're already invited as a collaborator for the Github project. Otherwise, you have to make a pull request for the owner of the project to accept.</p>
+					<p>If you choose to download the ZIP file to a folder on a local machine and unzip it (red box in picture above), then you will need to navigate to that folder through the terminal and type the command <code>git init</code> to initialize it as a local repo. Then, you still need to create a new remote repo on Github, and connect the two with the commands:</p>
+					<pre><code>git remote add origin https://github.com/[Git URL]
+git push -u origin master</code></pre></code></pre>
+					<p>Or, instead of creating a new Github remote repo, you can choose to <strong>fork</strong> the project to your Github account (orange box in the picture above). To "fork" means to take a copy of the parent project, rename it, and start a new project and community around the copy" <a href="https://opensource.com/article/17/12/fork-clone-difference">[Source]</a>. You will still need to connect your local repo to your forked remote repo, however. By creating a new remote repo, that means further development on the project will be on the new copy instead of the parent one whose source code you downloaded/forked from. This is different from <code>git clone</code>, for which your commits will be contributing to the original project.</p>
+					<img src="https://i.ibb.co/0Yd5dfy/Git.png" class="img-responsive">	
 					<p> Also, if you are working with other people on a Github project, you can add them as collaborators through the Settings/Collaborators tab on Github. Look up their Github user name and send them an invitation for the project.</p>
 					<img src="https://i.ibb.co/v1z672W/collaborators.png" class="img-responsive" width="600px">
-					<p>Regarding deployment of website-related projects, if you're hesitating about purchasing a domain because of the cost, you can publish your website as a Github page for free! On the Settings tab of your Github project, you can scroll down and find the option for Github Pages, then select the Source as the master branch as the picture below. However, if you prefer Heroku deployment (which also has a free plan), you can checkout our article on Heroku here.</p>
+					<p>Regarding deployment of website-related projects, if you're hesitating about purchasing a domain because of the cost, you can publish your website as a Github page for free! On the Settings tab of your Github project, you can scroll down and find the option for Github Pages, then select the Source as the master branch as the picture below. However, if you prefer Heroku deployment (which also has a free plan), you can checkout our article on Heroku <a href="../heroku/index.html">here</a>.</p>
 					<img src="https://i.ibb.co/xFgp4V1/pages.png" class="img-responsive" width="600px">
 
 					<h2> Source </h2>

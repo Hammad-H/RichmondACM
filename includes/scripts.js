@@ -9,6 +9,7 @@ function getLevel(){
 		case "1": return "";
 		case "2": return "../../";
 		case "3": return "../../../";
+		case "4": return "../../../../";
 	}
 	alert($('meta[name=level]').attr("content"));
 }
