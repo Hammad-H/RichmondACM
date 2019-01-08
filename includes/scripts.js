@@ -8,7 +8,9 @@ function getLevel(){
 	switch($('meta[name=level]').attr("content")){
 		case "1": return "";
 		case "2": return "../../";
-		case "3": return "../../../";
+		case "3":
+			alert("3");
+			return "../../../";
 		case "4": 
 			alert("4 level");
 			return "../../../../";
