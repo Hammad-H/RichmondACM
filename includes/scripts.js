@@ -13,7 +13,7 @@ function getLevel(){
 			alert("4 level");
 			return "../../../../";
 		default:
-			// alert($('meta[name=level]').attr("content")); 
+			alert("default");
 			return "";
 	}
 }
