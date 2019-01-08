@@ -9,9 +9,10 @@ function getLevel(){
 		case "1": return "";
 		case "2": return "../../";
 		case "3": return "../../../";
-		case "4": return "../../../../";
+		case "4": 
+			alert($('meta[name=level]').attr("content"));
+			return "../../../../";
 	}
-	// alert($('meta[name=level]').attr("content"));
 }
 
 function setHeader(dir) {
