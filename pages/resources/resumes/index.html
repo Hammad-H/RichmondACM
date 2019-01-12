@@ -3,151 +3,167 @@
 
 <head>
 	<!--Sets meta types about the website-->
-		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="level" content="3" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="level" content="3" />
 
 	<!--Sets title and favicon of the page-->
 	<title>ACM @ UR</title>
-	<link rel="icon" type="image/png" href="../../../includes/UR-ACM-Logo.png">
+	<link rel="icon" type="img/png" href="../../../includes/UR-ACM-Logo.png">
 
 	<!--Sets title of the page-->
-		<meta http-equiv="description" content="This is a crawlable description" />
+	<meta http-equiv="description" content="This is a crawlable description" />
 
-    <!--Bootstrap + Query Implementation -->
-    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--Bootstrap + Query Implementation -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<!--Font -->
-		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand|Cardo|EB+Garamond" rel="stylesheet">
 
 	<!--Pulls in ALL CUSTOM CSS Stylesheet-->
-		<style type="text/css"> @import url("../../../includes/header-styles.css");</style>
-		<style type="text/css"> @import url("../../../includes/shared-styles.css");</style>
-		<style type="text/css">	@import url("styles.css"); </style>
+	<style type="text/css"> @import url("../../../includes/header-styles.css");</style>
+	<style type="text/css"> @import url("../../../includes/shared-styles.css");</style>
+	<style type="text/css">	@import url("styles.css"); </style>
 
 	<!--Pulls in CUSTOM JS Script-->
-    	<script type="text/javascript" src="../../../includes/scripts.js"></script>
-			<script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript" src="../../../includes/scripts.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
 </head>
 
 <body>
-	<div id="container">
-		<header></header>
-
-		<main>
-			<h1>Student Resumes</h1>
-			<div id="main-container">
-				This is the student resumes section. In here, you will find the resumes of actual UR students
-				who got internships during their college career. Hopefully, it'll provide some insight into
-				how they got their internships because you'll be able to view their resume from before their
-				internship (the resume they submitted) and their resume after their internship. Below, we have
-				provided as much information we can about the student to the extent they were comfortable with.
-				<hr/>
-				<div id="resume-catalog">
-					<div class="resume-item">
-						<div class="resume-title">
-							<h4>Internship at</h4>
-							<image src="internlogo1.png">
-							<h3>Data Directions, Inc.</h3>
-						</div>
-						<div class="resume-meta">
-							<button class="btn btn-default pre-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95934_dataDirections_pre.pdf','_blank');" type="button">Pre</button>
-							<button class="btn btn-default post-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95935_dataDirections_post.pdf','_blank');" type="button">Post</button>
-						</div>
+	<header></header>
+	<main>
+		<div class="container">
+			<h1>Resume Tips</h1>
+			<div class="presentation">
+				<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTijCN8j9FLUvJT0dUvGvQ3MVFSIiqnX5yMPRK-K9eFU_wBDSPGldtF6wjl1HgVQ4efk0BzMSYv6HUM/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+			</div>
+			
+			<h1>Student Resume Examples</h1>
+			<p>Here are the resumes of actual UR students who got internships during their college career. Hopefully, it'll provide some insight into how they got their internships because you'll be able to view their resume from before their internship (the resume they submitted) and their resume after their internship. Below, we have provided as much information we can about the student to the extent they were comfortable with.</p>
+			
+			<div id="resume-catalog">
+				<div class="resume-item">
+					<div class="resume-title">
+						<h4>Internship at</h4><img src="internlogo1.png"><h3>Data Directions, Inc.</h3>
 					</div>
-					<div class="resume-item">
-						<div class="resume-title">
-							<h4>Internship at</h4>
-							<image src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Goldman_Sachs.svg/1200px-Goldman_Sachs.svg.png">
-							<h3>Goldman Sachs</h3>
-						</div>
-						<div class="resume-meta">
-							<button class="btn btn-default pre-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95938_GS_one_pre.pdf','_blank');" type="button">Pre</button>
-							<button class="btn btn-default post-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95937_GS_one_post.pdf','_blank');" type="button">Post</button>
-						</div>
+					<div class="resume-meta">
+						<button class="btn btn-default pre-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95934_dataDirections_pre.pdf','_blank');" type="button">Pre</button>
+						<button class="btn btn-default post-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95935_dataDirections_post.pdf','_blank');" type="button">Post</button>
 					</div>
-					<div class="resume-item">
-						<div class="resume-title">
-							<h4>Internship at</h4>
-							<image src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Goldman_Sachs.svg/1200px-Goldman_Sachs.svg.png">
-							<h3>Goldman Sachs</h3>
-						</div>
-						<div class="resume-meta">
-							<button class="btn btn-default pre-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95940_GS_two_pre.pdf','_blank');" type="button">Pre</button>
-							<button class="btn btn-default post-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95939_GS_two_post.pdf','_blank');" type="button">Post</button>
-						</div>
+				</div>
+				<div class="resume-item">
+					<div class="resume-title">
+						<h4>Internship at</h4>
+						<img src="img/GoldmanSachs.png">
+						<h3>Goldman Sachs</h3>
 					</div>
-					<div class="resume-item">
-						<div class="resume-title">
-							<h4>Internship at</h4>
-							<div class="img-holder">
-								<image src="internlogo2.png">
-								<image src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/512/Amazon-icon.png">
-							</div>
-							<h3>IBM + Amazon</h3>
-						</div>
-						<div class="resume-meta">
-							<button class="btn btn-default pre-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95945_IBM_pre.jpgf','_blank');" type="button">Pre</button>
-							<button class="btn btn-default post-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95943_amazon_post.jpg','_blank');" type="button">Post</button>
-						</div>
+					<div class="resume-meta">
+						<button class="btn btn-default pre-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95938_GS_one_pre.pdf','_blank');" type="button">Pre</button>
+						<button class="btn btn-default post-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95937_GS_one_post.pdf','_blank');" type="button">Post</button>
 					</div>
-					<div class="resume-item">
-						<div class="resume-title">
-							<h4>Internship at</h4>
-							<image src="https://fr.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/24241/versions/5/screenshot.png">
-							<h3>MathWorks</h3>
-						</div>
-						<div class="resume-meta">
-							<button class="btn btn-default pre-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95942_mathworks_pre.pdf','_blank');" type="button">Pre</button>
-							<button class="btn btn-default post-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95941_mathworks_post.pdf','_blank');" type="button">Post</button>
-						</div>
+				</div>
+				<div class="resume-item">
+					<div class="resume-title">
+						<h4>Internship at</h4>
+						<img src="img/GoldmanSachs.png">
+						<h3>Goldman Sachs</h3>
 					</div>
-					<div class="resume-item">
-						<div class="resume-title">
-							<h4>Internship at</h4>
-							<image src="http://www.greenwoodindy.com/wp-content/uploads/2016/07/pnc2.png">
-							<h3>PNC Bank</h3>
-						</div>
-						<div class="resume-meta">
-							<button class="btn btn-default pre-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95952_PNC_bank_post.pdf','_blank');" type="button">Pre</button>
-							<button class="btn btn-default post-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95952_PNC_bank_post.pdf','_blank');" type="button">Post</button>
-						</div>
+					<div class="resume-meta">
+						<button class="btn btn-default pre-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95940_GS_two_pre.pdf','_blank');" type="button">Pre</button>
+						<button class="btn btn-default post-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95939_GS_two_post.pdf','_blank');" type="button">Post</button>
 					</div>
-					<div class="resume-item">
-						<div class="resume-title">
-							<h4>Internship at</h4>
-							<image src="https://media.glassdoor.com/sqll/261789/timmons-group-squarelogo.png">
-							<h3>Timmons Group</h3>
+				</div>
+				<div class="resume-item">
+					<div class="resume-title">
+						<h4>Internship at</h4>
+						<div class="img-holder">
+							<img src="internlogo2.png">
+							<img src="img/Amazon.png">
 						</div>
-						<div class="resume-meta">
-							<button class="btn btn-default pre-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_96229_TimmonsGroup_pre.pdf','_blank');" type="button">Pre</button>
-							<button class="btn btn-default post-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_96230_TimmonsGroup_post.pdf','_blank');" type="button">Post</button>
-						</div>
+						<h3>IBM + Amazon</h3>
 					</div>
-					<div class="resume-item">
-						<div class="resume-title">
-							<h4>Internship at</h4>
-							<image src="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png">
-							<h3>Google</h3>
-						</div>
-						<div class="resume-meta">
-							<button class="btn btn-default pre-btn" onclick="window.open('https://drive.google.com/file/d/1XMz50dxHq4lufU-xb5J4LTqkRMe5tjem/view','_blank');" type="button">Pre</button>
-							<button class="btn btn-default post-btn" onclick="window.open('https://drive.google.com/file/d/107GkNM6WwZROf0y9FiZLyZBD45WhfPW_/view','_blank');" type="button">Post</button>
-						</div>
+					<div class="resume-meta">
+						<button class="btn btn-default pre-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95945_IBM_pre.jpgf','_blank');" type="button">Pre</button>
+						<button class="btn btn-default post-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95943_amazon_post.jpg','_blank');" type="button">Post</button>
+					</div>
+				</div>
+				<div class="resume-item">
+					<div class="resume-title">
+						<h4>Internship at</h4>
+						<img src="img/Mathworks.png">
+						<h3>MathWorks</h3>
+					</div>
+					<div class="resume-meta">
+						<button class="btn btn-default pre-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95942_mathworks_pre.pdf','_blank');" type="button">Pre</button>
+						<button class="btn btn-default post-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95941_mathworks_post.pdf','_blank');" type="button">Post</button>
+					</div>
+				</div>
+				<div class="resume-item">
+					<div class="resume-title">
+						<h4>Internship at</h4>
+						<img src="img/PNC.png">
+						<h3>PNC Bank</h3>
+					</div>
+					<div class="resume-meta">
+						<button class="btn btn-default pre-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95952_PNC_bank_post.pdf','_blank');" type="button">Pre</button>
+						<button class="btn btn-default post-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_95952_PNC_bank_post.pdf','_blank');" type="button">Post</button>
+					</div>
+				</div>
+				<div class="resume-item">
+					<div class="resume-title">
+						<h4>Internship at</h4>
+						<img src="img/Timmons.png">
+						<h3>Timmons Group</h3>
+					</div>
+					<div class="resume-meta">
+						<button class="btn btn-default pre-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_96229_TimmonsGroup_pre.pdf','_blank');" type="button">Pre</button>
+						<button class="btn btn-default post-btn" onclick="window.open('http://os_extranet_files_test.s3.amazonaws.com/45328_96230_TimmonsGroup_post.pdf','_blank');" type="button">Post</button>
+					</div>
+				</div>
+				<div class="resume-item">
+					<div class="resume-title">
+						<h4>Internship at</h4>
+						<img src="img/Google.png">
+						<h3>Google</h3>
+					</div>
+					<div class="resume-meta">
+						<button class="btn btn-default pre-btn" onclick="window.open('https://drive.google.com/file/d/1XMz50dxHq4lufU-xb5J4LTqkRMe5tjem/view','_blank');" type="button">Pre</button>
+						<button class="btn btn-default post-btn" onclick="window.open('https://drive.google.com/file/d/107GkNM6WwZROf0y9FiZLyZBD45WhfPW_/view','_blank');" type="button">Post</button>
 					</div>
 				</div>
 			</div>
-
-			<div id="popup-page">
-				<div id="back-screen"></div>
-				<div id="content-screen"></div>
-			</div>
-
-		</main>
-		<div id="spider-background"></div>
-
-		<footer></footer>
-	</div>
+			<br>
+			<h2>Career Advice: Buffing Your Resume and Networking</h2><br>
+			<p>If you want a job at a top technical company, displaying your interest outside of class is crucial! Below, you'll find a list of things you can do to strengthen your position in the job market. Even if you are not aiming for a top technical company, doing the things below will considerably boost your chances of securing an interview.</p>
+			
+			<p><div class="subtitle">Projects</div> Projects are really important and are a great way of demonstrating your interest outside of class. It may be daunting to start on a project if you feel like you don't know how to do anything, so just giving it a try and doing your own research is very important in the process. You most likely won't build anything magnificent the first time you learn something from scratch, but the point is to learn. So even if you start by developing a simple calculator app to learn iOS development, that's a great way to start. Doing an independent study is an option to get a substantial project on your resume if you're struggling for units. If you would like to do projects with other people, doing them through ACM is a great way to start.
+			</p>
+			<p><div class="subtitle">Hackathons</div> Hackathons are also a great way to show you have interest outside of your classes. You can also put your hackathon projects on your resume, and people are known to get jobs and internships from hackathons. In order to see a list of hackathons coming up, go to <a href="https://www.mlh.io" target="_blank">mlh.io</a>. ACM also organizes an annual <a href="https://acmurichmond.github.io/">SpiderHacks</a> hackathon that you can attend!</p>
+			<p><div class="subtitle">Open Source Projects</div> Open source projects are something that seem to be mentioned over and over again. If you contribute to open source projects, that can be a testament to your programming ability and debugging. Starting on an open source project can be daunting, so researching resources for first timers like <a href="https://www.firsttimersonly.com/">https://www.firsttimersonly.com/</a> can be useful.</p>
+			<p><div class="subtitle">Programming Competitions</div> The ACM programming competition and other programming competitions is also a good way to get your feet wet with CS activities outside of class. If you're serious about wanting to do well at the ACM programming competition, be sure to join Dr. Prateek Bhakta's 0.25 credit ACM prep class!</p>
+			<p><div class="subtitle">Research</div> Research is a good way to get experience on your resume, especially in your early years. Since UR has the UR Guarantee where you are guaranteed a summer of $3,000, definitely take advantage of this in your early years! If you are someone going to industry instead of grad school, internships seem to be preferred but research is certainly not a bad thing to have on your resume. A common question is how to actually secure a research position with a professor, and that involves asking early enough that they didn't fill all the space in their lab and knocking on a professor's door, even one you don't know, and asking if they'd consider you.</p>
+			<p><div class="subtitle">Internships</div> This may seem a little preposterous that this is something about buffing your resume because it's exactly what you're most likely trying to do. However, this point is here to say that it's never to early to apply to internships and there are many places that will accept sophomores and freshman. Applying to a lot of places is important, though. But having one internship on your resume is an excellent stepping stone to getting a better one!</p>
+			<p><div class="subtitle">Jobs/Extracurriculars/Everything Else</div> Jobs such as tutoring or being a lab assistant can boost your resume because it shows you can communicate what you know to people. Extracurriculars such as being active in your *cough* ACM chapter *cough* would also boost your resume. Truth is, a lot of things can boost your resume, all that needs to show is that you have a passion for CS.</p>
+			<p><div class="subtitle">HOWEVER...</div> be aware that technical skills are not all that matter to a person. Communication, being able to work in a team, getting along with others is just as crucial as your technical skills. Because after all, even programmers have to work with other people, contrary to the stereotype.</p>
+			<p>Those are the main points about things to do to include on your resume (mostly) technical wise. However, more will have to be done to secure your job/internship. This includes networking. Conferences like <a href="https://ghc.anitab.org/2018-student-academic/scholarships/">Grace Hopper </a>(women in tech conference) and <a href="http://tapiaconference.org/">Tapia </a> (diversity conference) are amazing for that. Always try and apply for the scholarships that they have because you never know if you might get it. Even then, ask the CS department for funding to go to these conferences and they may fund you. Besides conferences, ask around for people you might know or connections you might have - especially with UR alumni. Don't be afraid to hit up an UR alum on LinkedIn that works somewhere that you'd like to work. Having a referral will considerably boost your chances of getting an interview somewhere.</p>
+			<h2>Extra Tips On Resume</h2>
+			<p>Here are some general tips for your resume formatting.</p>
+			<ol>
+				<li>Keep your resume to 1 page! At this stage in your life, you are not important enough to have a 2 page resume, unless you sold a company to Google for $30 million or you have two decades of experience.</li>
+				<li>If you find it's hard to fit things on your resume, your high school stuff should be the first to go (unless it was something super impressive).</li>
+				<li>Make sure your resume looks <b>neat</b> and is free of spelling and grammar errors.</li>
+				<li>Keep your bullets short - 1 to 2 lines at most. Do NOT write an entire paragraph in a bullet.</li>
+				<li>List projects, hackathons, programming competitions, being a member of ACM, doing Project Euler problems, anything you’ve participated in! If you're struggling with projects to put on your resume, you can use some projects done in class.</li>
+				<li><b>IMPORTANT:</b> One of the most important tips learned from Gayle Laakmann McDowell is focus on your accomplishments, not your responsibilities. Quantify your accomplishments. For example, instead of “Worked on memory management”, write “Reduced the cache size by 70%”.</li>
+				<li>If your GPA is below a 3.0, consider leaving it off your resume. If your major GPA is considerably higher than your cumulative, consider writing your major GPA on your resume as well.</li>
+				<li>When including your classes, you don't need to put classes that are already assumed you've taken. Like you do not need to put "Data Structures" if you're taking "Advanced Computer Networks."</li>
+				<li>Include your Github link on your resume.</li>
+			</ol>
+		</div>
+	</main>
+	<div id="spider-background"></div>
+	<footer></footer>
 </body>

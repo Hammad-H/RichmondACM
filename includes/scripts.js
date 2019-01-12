@@ -38,7 +38,7 @@ function setHeader(dir) {
 						      		</a>
 									<ul class="dropdown-menu">
 										<li><a href = "`+dir+`pages/resources/paths/index.html">Career Paths in CS</a></li>
-										<li><a href = "`+dir+`pages/resources/resumes/index.html">Resume Guide</a></li>
+										<li><a href = "`+dir+`pages/resources/resumes/index.html">Resume/Career Advice</a></li>
 										<li><a href = "`+dir+`pages/resources/interview/index.html">Interview Prep</a></li>
 										<li><a href = "`+dir+`pages/resources/technical/index.html">Technical Guides</a></li>
 									</ul>

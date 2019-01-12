@@ -1,10 +1,35 @@
-#main-container {
-  font-size: 1.1em;
-}
-#resume-catalog {
+/*p {
+  font-family: "Libre Baskerville", serif;
+  font-size: 18px;
+}*/
 
+h1, h2 {
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+  color: #002633;
+  letter-spacing: 0.02em;
+  display: block;
+  font-style: normal;
+  padding-top: 0.04em;
+  text-shadow: 0.03em 0.03em 0 rgba(0, 0, 0, 0.1);
 }
 
+.container {
+  padding: 0 50px;
+}
+
+main {
+  font-family: "Libre Baskerville", serif;
+  font-size: 18px;
+}
+
+.presentation {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Thumbnail Resume Examples
+--------------------------------------------------------------*/
 /* Thumbnail Resume Item Attributes */
 .resume-item {
   float: left;
@@ -14,7 +39,8 @@
 .resume-item .resume-title {
   background: linear-gradient(to bottom, white, #DDD);
 }
-.resume-item h4{
+
+.resume-item h4 {
   margin: 0;
   height: 30px;
 
@@ -60,10 +86,25 @@
 }
 
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-        display: block;
-        height: auto;
-        max-width: 100%;
-        line-height: 1;
-        margin:auto;
-        width: 100%;
-        }
+  display: block;
+  height: auto;
+  max-width: 100%;
+  line-height: 1;
+  margin:auto;
+  width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+# Text
+--------------------------------------------------------------*/
+.subtitle {
+  font-style: normal;
+  color: #0052cc;
+  font-family: 'Cardo', serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  line-height: 2.2em;
+}
+
