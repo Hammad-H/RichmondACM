@@ -48,7 +48,7 @@ function setHeader(dir) {
 						      			Activities<span class="caret"></span>
 						      		</a>
 									<ul class="dropdown-menu">
-										<li><a href = "`+dir+`pages/activities/hackathon/index.html">SpiderHacks</a></li>
+										<li><a href = "https://acmurichmond.github.io/" target="_blank">SpiderHacks</a></li>
 										<li><a href = "`+dir+`pages/activities/current/index.html">Current Project Areas</a></li>
 										<li><a href = "`+dir+`pages/activities/past/index.html">Past Projects</a></li>
 										<li><a href = "`+dir+`pages/activities/volunteer/index.html">Volunteer</a></li>
