@@ -20,7 +20,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<!--Font -->
-	<link href="https://fonts.googleapis.com/css?family=Quicksand|Cardo|EB+Garamond" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand|Cardo|EB+Garamond|Josefin+Slab:400,700" rel="stylesheet">
 
 	<!--Pulls in ALL CUSTOM CSS Stylesheet-->
 	<style type="text/css"> @import url("../../../includes/header-styles.css");</style>
@@ -29,7 +29,14 @@
 
 	<!--Pulls in CUSTOM JS Script-->
 	<script type="text/javascript" src="../../../includes/scripts.js"></script>
-	<script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.accordion.js"></script>
+	<script type="text/javascript" src="jquery.easing.1.3.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#st-accordion').accordion();
+		});
+	</script>
 </head>
 
 <body>
@@ -136,34 +143,80 @@
 				</div>
 			</div>
 			<br>
+			<br>
 			<h2>Career Advice: Buffing Your Resume and Networking</h2><br>
 			<p>If you want a job at a top technical company, displaying your interest outside of class is crucial! Below, you'll find a list of things you can do to strengthen your position in the job market. Even if you are not aiming for a top technical company, doing the things below will considerably boost your chances of securing an interview.</p>
-			
-			<p><div class="subtitle">Projects</div> Projects are really important and are a great way of demonstrating your interest outside of class. It may be daunting to start on a project if you feel like you don't know how to do anything, so just giving it a try and doing your own research is very important in the process. You most likely won't build anything magnificent the first time you learn something from scratch, but the point is to learn. So even if you start by developing a simple calculator app to learn iOS development, that's a great way to start. Doing an independent study is an option to get a substantial project on your resume if you're struggling for units. If you would like to do projects with other people, doing them through ACM is a great way to start.
-			</p>
-			<p><div class="subtitle">Hackathons</div> Hackathons are also a great way to show you have interest outside of your classes. You can also put your hackathon projects on your resume, and people are known to get jobs and internships from hackathons. In order to see a list of hackathons coming up, go to <a href="https://www.mlh.io" target="_blank">mlh.io</a>. ACM also organizes an annual <a href="https://acmurichmond.github.io/">SpiderHacks</a> hackathon that you can attend!</p>
-			<p><div class="subtitle">Open Source Projects</div> Open source projects are something that seem to be mentioned over and over again. If you contribute to open source projects, that can be a testament to your programming ability and debugging. Starting on an open source project can be daunting, so researching resources for first timers like <a href="https://www.firsttimersonly.com/">https://www.firsttimersonly.com/</a> can be useful.</p>
-			<p><div class="subtitle">Programming Competitions</div> The ACM programming competition and other programming competitions is also a good way to get your feet wet with CS activities outside of class. If you're serious about wanting to do well at the ACM programming competition, be sure to join Dr. Prateek Bhakta's 0.25 credit ACM prep class!</p>
-			<p><div class="subtitle">Research</div> Research is a good way to get experience on your resume, especially in your early years. Since UR has the UR Guarantee where you are guaranteed a summer of $3,000, definitely take advantage of this in your early years! If you are someone going to industry instead of grad school, internships seem to be preferred but research is certainly not a bad thing to have on your resume. A common question is how to actually secure a research position with a professor, and that involves asking early enough that they didn't fill all the space in their lab and knocking on a professor's door, even one you don't know, and asking if they'd consider you.</p>
-			<p><div class="subtitle">Internships</div> This may seem a little preposterous that this is something about buffing your resume because it's exactly what you're most likely trying to do. However, this point is here to say that it's never to early to apply to internships and there are many places that will accept sophomores and freshman. Applying to a lot of places is important, though. But having one internship on your resume is an excellent stepping stone to getting a better one!</p>
-			<p><div class="subtitle">Jobs/Extracurriculars/Everything Else</div> Jobs such as tutoring or being a lab assistant can boost your resume because it shows you can communicate what you know to people. Extracurriculars such as being active in your *cough* ACM chapter *cough* would also boost your resume. Truth is, a lot of things can boost your resume, all that needs to show is that you have a passion for CS.</p>
-			<p><div class="subtitle">HOWEVER...</div> be aware that technical skills are not all that matter to a person. Communication, being able to work in a team, getting along with others is just as crucial as your technical skills. Because after all, even programmers have to work with other people, contrary to the stereotype.</p>
-			<p>Those are the main points about things to do to include on your resume (mostly) technical wise. However, more will have to be done to secure your job/internship. This includes networking. Conferences like <a href="https://ghc.anitab.org/2018-student-academic/scholarships/">Grace Hopper </a>(women in tech conference) and <a href="http://tapiaconference.org/">Tapia </a> (diversity conference) are amazing for that. Always try and apply for the scholarships that they have because you never know if you might get it. Even then, ask the CS department for funding to go to these conferences and they may fund you. Besides conferences, ask around for people you might know or connections you might have - especially with UR alumni. Don't be afraid to hit up an UR alum on LinkedIn that works somewhere that you'd like to work. Having a referral will considerably boost your chances of getting an interview somewhere.</p>
-			<h2>Extra Tips On Resume</h2>
-			<p>Here are some general tips for your resume formatting.</p>
-			<ol>
-				<li>Keep your resume to 1 page! At this stage in your life, you are not important enough to have a 2 page resume, unless you sold a company to Google for $30 million or you have two decades of experience.</li>
-				<li>If you find it's hard to fit things on your resume, your high school stuff should be the first to go (unless it was something super impressive).</li>
-				<li>Make sure your resume looks <b>neat</b> and is free of spelling and grammar errors.</li>
-				<li>Keep your bullets short - 1 to 2 lines at most. Do NOT write an entire paragraph in a bullet.</li>
-				<li>List projects, hackathons, programming competitions, being a member of ACM, doing Project Euler problems, anything you’ve participated in! If you're struggling with projects to put on your resume, you can use some projects done in class.</li>
-				<li><b>IMPORTANT:</b> One of the most important tips learned from Gayle Laakmann McDowell is focus on your accomplishments, not your responsibilities. Quantify your accomplishments. For example, instead of “Worked on memory management”, write “Reduced the cache size by 70%”.</li>
-				<li>If your GPA is below a 3.0, consider leaving it off your resume. If your major GPA is considerably higher than your cumulative, consider writing your major GPA on your resume as well.</li>
-				<li>When including your classes, you don't need to put classes that are already assumed you've taken. Like you do not need to put "Data Structures" if you're taking "Advanced Computer Networks."</li>
-				<li>Include your Github link on your resume.</li>
-			</ol>
+
+			<div class="wrapper">
+				<div id="st-accordion" class="st-accordion">
+					<ul>
+						<li>
+							<a href="#">Projects<span class="st-arrow">Open or Close</span></a>
+							<div class="st-content">
+								<p>Projects are really important and are a great way of demonstrating your interest outside of class. It may be daunting to start on a project if you feel like you don't know how to do anything, so just giving it a try and doing your own research is very important in the process. You most likely won't build anything magnificent the first time you learn something from scratch, but the point is to learn. So even if you start by developing a simple calculator app to learn iOS development, that's a great way to start. Doing an independent study is an option to get a substantial project on your resume if you're struggling for units. If you would like to do projects with other people, doing them through ACM is a great way to start.</p>
+							</div>
+						</li>
+						<li>
+							<a href="#">Hackathons<span class="st-arrow">Open or Close</span></a>
+							<div class="st-content">
+								<p>Hackathons are also a great way to show you have interest outside of your classes. You can also put your hackathon projects on your resume, and people are known to get jobs and internships from hackathons. In order to see a list of hackathons coming up, go to <a href="https://www.mlh.io" target="_blank">mlh.io</a>. ACM also organizes an annual <a href="https://acmurichmond.github.io/">SpiderHacks</a> hackathon that you can attend!</p>
+							</div>
+						</li>
+						<li>
+							<a href="#">Open Source Projects<span class="st-arrow">Open or Close</span></a>
+							<div class="st-content">
+								<p>Open source projects are something that seem to be mentioned over and over again. If you contribute to open source projects, that can be a testament to your programming ability and debugging. Starting on an open source project can be daunting, so researching resources for first timers like <a href="https://www.firsttimersonly.com/">https://www.firsttimersonly.com/</a> can be useful.</p>
+							</div>
+						</li>
+						<li>
+							<a href="#">Programming Competitions<span class="st-arrow">Open or Close</span></a>
+							<div class="st-content">
+								<p>The ACM programming competition and other programming competitions is also a good way to get your feet wet with CS activities outside of class. If you're serious about wanting to do well at the ACM programming competition, be sure to join Dr. Prateek Bhakta's 0.25 credit ACM prep class!</p>
+							</div>
+						</li>
+						<li>
+							<a href="#">Research <span class="st-arrow">Open or Close</span></a>
+							<div class="st-content">
+								<p>Research is a good way to get experience on your resume, especially in your early years. Since UR has the UR Guarantee where you are guaranteed a summer of $3,000, definitely take advantage of this in your early years! If you are someone going to industry instead of grad school, internships seem to be preferred but research is certainly not a bad thing to have on your resume. A common question is how to actually secure a research position with a professor, and that involves asking early enough that they didn't fill all the space in their lab and knocking on a professor's door, even one you don't know, and asking if they'd consider you.</p>
+							</div>
+						</li>
+						<li>
+							<a href="#">Internships<span class="st-arrow">Open or Close</span></a>
+							<div class="st-content">
+								<p>This may seem a little preposterous that this is something about buffing your resume because it's exactly what you're most likely trying to do. However, this point is here to say that it's never to early to apply to internships and there are many places that will accept sophomores and freshman. Applying to a lot of places is important, though. But having one internship on your resume is an excellent stepping stone to getting a better one!</p>
+								<p>Here are some internship programs for sophomores/freshmen:</p>
+								<p><a href="https://careers.google.com/jobs#!t=jo&jid=/google/engineering-practicum-intern-summer-2019-1600-amphitheatre-pkwy-mountain-view-ca-4271710018&" target="_blank">Google Engineering Practicum Intern</a></p>
+								<p><a href="https://careers.twitter.com/en/university.html" target="_blank">Twitter for Students</a></p>
+								<p><a href="https://www.facebook.com/careers/students-and-grads/students" target="_blank">Facebook University</a></p>
+								<p><a href="https://careers.microsoft.com/us/en/job/475698/Internship-Opportunities-for-Students-Explore-Microsoft-Internship-Program" target="_blank">Microsoft Explore Internship</a></p>
+								<p><a href="https://www.amazon.jobs/en/landing_pages/amazonfutureengineer" target="_blank">Amazon Future Engineer Internship</a></p>
+							</div>
+						</li>
+						<li>
+							<a href="#">Jobs/Extracurriculars/Everything Else<span class="st-arrow">Open or Close</span></a>
+							<div class="st-content">
+								<p>Jobs such as tutoring or being a lab assistant can boost your resume because it shows you can communicate what you know to people. Extracurriculars such as being active in your *cough* ACM chapter *cough* would also boost your resume. Truth is, a lot of things can boost your resume, all that needs to show is that you have a passion for CS.</p>
+							</div>
+						</li>
+						<li>
+							<a href="#">HOWEVER...<span class="st-arrow">Open or Close</span></a>
+							<div class="st-content">
+								<p>be aware that technical skills are not all that matter to a person. Communication, being able to work in a team, getting along with others is just as crucial as your technical skills. Because after all, even programmers have to work with other people, contrary to the stereotype.</p>
+							</div>
+						</li>
+						<li>
+							<a href="#">Networking<span class="st-arrow">Open or Close</span></a>
+							<div class="st-content">
+								<p>Those are the main points about things to do to include on your resume (mostly) technical wise. However, more will have to be done to secure your job/internship. This includes networking. Conferences like <a href="https://ghc.anitab.org/2018-student-academic/scholarships/">Grace Hopper </a>(women in tech conference) and <a href="http://tapiaconference.org/">Tapia </a> (diversity conference) are amazing for that. Always try and apply for the scholarships that they have because you never know if you might get it. Even then, ask the CS department for funding to go to these conferences and they may fund you. Besides conferences, ask around for people you might know or connections you might have - especially with UR alumni. Don't be afraid to hit up an UR alum on LinkedIn that works somewhere that you'd like to work. Having a referral will considerably boost your chances of getting an interview somewhere.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-	</main>
-	<div id="spider-background"></div>
-	<footer></footer>
+		<br>
+	</div>
+</main>
+<div id="spider-background"></div>
+<footer></footer>
 </body>
