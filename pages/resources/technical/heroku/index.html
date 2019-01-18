@@ -63,7 +63,7 @@
 					<p>Because Heroku is meant to host apps (Node.js/PHP/Python) instead of static websites, we will need to trick Heroku into thinking that our website is a PHP app. First, navigate to your project root directory, and rename your <code>index.html</code> (or whichever your main HTML file is) file to <code>home.html</code> with the following terminal command:</p>
 					<pre><code>mv index.html home.html</code></pre>
 					<p>Next, we can add a PHP file that does nothing to your application, but just exists to make Heroku think that we're deploying a PHP app:</p>
-					<pre><code>echo '\&lt;?php include_once("home.html"); ?\&gt;' &gt; index.php</code></pre>
+					<pre><code>echo '&lt;?php include_once("home.html"); ?&gt;' &gt; index.php</code></pre>
 					<p>The above command creates a <i>index.php</i> file that redirects the broswer to <i>home.html</i>. Next, we will create a <i>composer.json</i> file, which is usually used to manage dependencies in a real PHP app, and is required by Heroku for deploying PHP apps. In our case, because we don't actually need any dependency, the <i>composer.json</i> file can contain a single line <code>{}</code>. Type this command into the terminal to create the file:</p>
 					<pre><code>echo '{}' > composer.json</code></pre>
 					<p>Let's add all the files, create a commit for this change and push to the remote repository:</p>
